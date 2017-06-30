@@ -44,6 +44,7 @@ Your site should include validations for the following:
 
 ```
 $ git clone https://github.com/Chitroopa/Marios-Speciality-Food-Products
+$ cd Marios-Speciality-Food-Products
 ```
 
 Install required gems:
@@ -60,6 +61,7 @@ Create databases:
 ```
 $ rails db:create
 $ rails db:migrate
+$ rails db:seed
 ```
 
 Start the webserver:
