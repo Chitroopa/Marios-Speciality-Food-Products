@@ -1,2 +1,20 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>Welcome to Mario's Speciality Food Products</h1>
+<% content_for(:title, "Welcome") %>
+<div class="jumbotron">
+  <% if @products.any?() %>
+    <% @products.each do |product| %>
+      <!-- <li><%= product.name %></li> -->
+      <div class="card well">
+        <div class="card-block">
+          <h4 class="card-title"><%= product.name %></h4>
+          <p class="card-text">
+            $<%= product.cost %>
+          </p>
+          <p><%= link_to "See details and reviews", product_path(product) %></p>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <h4>No products Yet</h4>
+  <% end %>
+</div>
