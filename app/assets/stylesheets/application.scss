@@ -20,9 +20,7 @@
  $mario-blue: #3939e5;
  $mario-yellow: #efd6aa;
  $mario-brown: #996611;
- // * {
- //   border: 1px solid;
- // }
+
  .navbar-bg-color {
    background-color:$mario-red;
  }
@@ -31,7 +29,6 @@
     color: $mario-yellow;
   }
 }
-
 #navbar {
   .active-bg {
     background-color:$mario-blue;
