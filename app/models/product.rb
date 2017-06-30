@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
     .joins(:reviews)
     .group("products.id")
     .order("reviews_count DESC")
-    .limit(5)
+    .limit(3)
   )}
 
   scope :recently_added_products, -> {
@@ -16,6 +16,6 @@ class Product < ActiveRecord::Base
   }
 
   scope :local_products, -> {
-    where("country like ?", "USA").limit(5)
+    where("country like ?", "USA")
   }
 end

@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    # @products = Product.all
+    @products = Product.paginate(:page => params[:page], :per_page => 5)
     @most_reviewed_products = Product.most_reviewed_products
-    @local_products = Product.local_products
-    @recently_added_products = Product.recently_added_products
+    @local_products = Product.local_products.paginate(:page => params[:local_page], :per_page => 3)
+    @recently_added_products = Product.recently_added_products.paginate(:page => params[:recent_page], :per_page => 3)
   end
 
   def edit
