@@ -19,6 +19,7 @@
  $mario-red: #e85c5c;
  $mario-blue: #3939e5;
  $mario-yellow: #ffff00;
+ $mario-brown: #996611;
  // * {
  //   border: 1px solid;
  // }
@@ -40,4 +41,12 @@
       color:white;
     }
   }
+}
+.product-header {
+  color: $mario-blue
+}
+.review-header {
+  font-weight: bolder;
+  font-size: 20px;
+  color: $mario-brown;
 }
