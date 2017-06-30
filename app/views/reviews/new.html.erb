@@ -1,3 +1,5 @@
 <h1>New Review</h1>
 
 <%= render "form" %>
+
+<!-- Product.select("products.name, products.cost, products.country, count(reviews.id) as reviews_count").joins(:reviews).group("products.id").order("reviews_count DESC").limit(5) -->

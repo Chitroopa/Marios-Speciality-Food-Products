@@ -1,0 +1,15 @@
+<% if products.any?() %>
+  <% products.each do |product| %>
+    <div class="card well">
+      <div class="card-block">
+        <h4 class="card-title"><%= product.name %></h4>
+        <p class="card-text">
+          $<%= product.cost %>
+        </p>
+        <p><%= link_to "See details and reviews", product_path(product) %></p>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <h4>No products Yet</h4>
+<% end %>

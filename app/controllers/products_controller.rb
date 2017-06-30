@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    @most_reviewed_products = Product.most_reviewed_products
+    @local_products = Product.local_products
+    @recently_added_products = Product.recently_added_products
   end
 
   def edit
