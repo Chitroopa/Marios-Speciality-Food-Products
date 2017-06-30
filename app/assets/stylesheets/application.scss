@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ $mario-red: #e85c5c;
+ $mario-blue: #3939e5;
+ $mario-yellow: #ffff00;
+ // * {
+ //   border: 1px solid;
+ // }
+ .navbar-bg-color {
+   background-color:$mario-red;
+ }
+.navbar-header{
+  a {
+    color: $mario-yellow;
+  }
+}
+
+#navbar {
+  .active-bg {
+    background-color:$mario-blue;
+  }
+  li {
+    a{
+      color:white;
+    }
+  }
+}
