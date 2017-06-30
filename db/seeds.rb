@@ -24,5 +24,21 @@ Review.destroy_all
   end
 end
 
+10.times do |index|
+  f = Product.create!(
+        name: Faker::Lorem.characters(10),
+        cost: Faker::Number.decimal(2),
+        country: "USA"
+      )
+  5.times do |index|
+    Review.create!(
+      author: Faker::GameOfThrones.character,
+      content: Faker::Lorem.characters(55),
+      rating: Faker::Number.between(1, 5),
+      product_id: f.id
+    )
+  end
+end
+
 p "Created #{Product.count} products"
 p "Created #{Review.count} reviews"
